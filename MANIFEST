@@ -1,0 +1,15 @@
+# $Id: MANIFEST,v 1.1 2003/02/20 19:54:42 robert Exp $
+Changes
+Client.pm
+Client.xs
+MANIFEST
+Makefile.PL
+README
+ppport.h
+t/1.t
+t/findalbum.t
+t/findartist.t
+t/findtrack.t
+t/getalbum.t
+t/getartist.t
+typemap

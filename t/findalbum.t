@@ -1,6 +1,8 @@
 BEGIN { $| =1;  print "1..1\n"; }
 END { print "not ok 1\n" unless $loaded; }
 #
+# $Id: findalbum.t,v 1.4 2003/04/16 11:02:44 sander Exp $
+#
 use strict;
 use MusicBrainz::Client();
 use MusicBrainz::Queries qw(MBQ_FindAlbumByName

@@ -2,7 +2,7 @@
 use 5.6.1;
 use ExtUtils::MakeMaker;
 
-# $Id: Makefile.PL,v 1.4 2003/03/01 01:12:35 sander Exp $
+# $Id: Makefile.PL,v 1.6 2003/05/04 01:07:15 sander Exp $
 
 sub MY::postamble {
 
@@ -24,7 +24,7 @@ EOT
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'              => 'MusicBrainz::Client',
-    'VERSION_FROM'      => 'Client.pm', # finds $VERSION
+    'VERSION'           => '0.06_01',
     'PREREQ_PM'	        => {'MusicBrainz::Queries' => 0.01,
                             'Test::More'           => 0 }, 
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
@@ -32,6 +32,7 @@ WriteMakefile(
        AUTHOR     => 'Sander van Zoest <svanzoest@cpan.org>') : ()),
 
     'LIBS'		=> ['-L/usr/local/lib -lstdc++ -lm -lmusicbrainz'], 
+    'PMLIBDIRS'         => ['Client'],
     'DEFINE'		=> '', # e.g., '-DHAVE_SOMETHING'
     'CCFLAGS'           => '',
     'INC'		=> '-I/usr/local/include -I.',

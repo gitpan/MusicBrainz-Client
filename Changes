@@ -3,7 +3,14 @@ Revision history for Perl extension MusicBrainz::Client.
 All changes by Sander van Zoest <svanzoest@cpan.org> unless 
 otherwise noted.
 
-$Id: Changes,v 1.10 2003/03/01 01:18:46 sander Exp $
+$Id: Changes,v 1.15 2003/05/04 01:11:58 sander Exp $
+
+0.06_01 Sun May  4 01:06:08 2003
+	- Added beginnings of a perlish interface
+	  MusicBrainz::Client::Simple [Matthias Friedrich]
+	- Adjusted version number "require" to "use" with
+	  the more backwards compatible zero padded syntax.
+	  [Matthias Friedrich, Sander van Zoest]
 
 0.06   Sat Mar  1 01:16:40 2003
 	- Added Win32 support [Tom Heady]

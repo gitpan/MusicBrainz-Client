@@ -5,11 +5,11 @@ package MusicBrainz::Client;
 #
 #   Copyright (C) 2003 Alexander van Zoest
 #   
-#   $Id: Client.pm,v 1.6 2003/03/01 01:18:48 sander Exp $
+#   $Id: Client.pm,v 1.7 2003/04/17 19:08:40 sander Exp $
 #
 #----------------------------------------------------------------------------*/
 
-require 5.6.1;
+use 5.006_001; 
 use strict;
 use warnings;
 use Carp;
@@ -35,7 +35,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.6 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 
 sub AUTOLOAD {

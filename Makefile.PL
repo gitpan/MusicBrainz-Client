@@ -2,7 +2,7 @@
 use 5.6.1;
 use ExtUtils::MakeMaker;
 
-# $Id: Makefile.PL,v 1.2 2003/02/22 08:37:49 sander Exp $
+# $Id: Makefile.PL,v 1.4 2003/03/01 01:12:35 sander Exp $
 
 sub MY::postamble {
 
@@ -33,6 +33,7 @@ WriteMakefile(
 
     'LIBS'		=> ['-L/usr/local/lib -lstdc++ -lm -lmusicbrainz'], 
     'DEFINE'		=> '', # e.g., '-DHAVE_SOMETHING'
+    'CCFLAGS'           => '',
     'INC'		=> '-I/usr/local/include -I.',
     'dist'		=> {
 	COMPRESS	=> 'gzip -9f',

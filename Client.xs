@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 
    MusicBrainz Perl XS Interface -- The Internet music metadatabase
-     $Id: Client.xs,v 1.2 2003/02/21 07:43:30 sander Exp $
+     $Id: Client.xs,v 1.5 2003/02/25 02:10:56 sander Exp $
 ----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus      
@@ -133,16 +133,18 @@ OUTPUT:
 
 #
 # XXX: WINDOWS ONLY
-#
-# #ifdef WIN32
-# void  
-# mb_WSAInit(musicbrainz_t mb)
-# PROTOTYPE: $
-#
-# void       
-# mb_WSAStop(musicbrainz_t mb)
-# PROTOTYPE: $
-# #endif
+
+#ifdef WIN32
+
+void  
+mb_WSAInit(musicbrainz_t mb)
+PROTOTYPE: $
+
+void       
+mb_WSAStop(musicbrainz_t mb)
+PROTOTYPE: $
+
+#endif
 
 int
 mb_authenticate(musicbrainz_t mb, char* userName, char* password) 
@@ -375,9 +377,11 @@ char*
 mb_calculate_sha1(musicbrainz_t mb, char* filename)
 PROTOTYPE: $$
 PREINIT:
-int status;
+  char sha1[MB_SHA1_LENGTH];
+  int status;
 CODE:
-  mb_CalculateSha1(mb,filename,RETVAL);
+  status = mb_CalculateSha1(mb,filename,sha1);
+  RETVAL = sha1;
 OUTPUT:
   RETVAL
 CLEANUP:

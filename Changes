@@ -3,7 +3,12 @@ Revision history for Perl extension MusicBrainz::Client.
 All changes by Sander van Zoest <svanzoest@cpan.org> unless 
 otherwise noted.
 
-$Id: Changes,v 1.2 2003/02/20 20:48:09 sander Exp $
+$Id: Changes,v 1.3 2003/02/21 07:43:30 sander Exp $
+
+0.03   Fri Feb 21 07:41:05 2003
+	- Added missing ExtUtil::Constant fallback files
+	- Added more pod documentation
+	- Fixed missing $duration return value for get_mp3_info()
 
 0.02   Thu Feb 20 20:43:39 2003
         - First public alpha version

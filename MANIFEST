@@ -1,4 +1,4 @@
-# $Id: MANIFEST,v 1.1 2003/02/20 19:54:42 robert Exp $
+# $Id: MANIFEST,v 1.2 2003/02/20 21:16:00 sander Exp $
 Changes
 Client.pm
 Client.xs
@@ -13,3 +13,5 @@ t/findtrack.t
 t/getalbum.t
 t/getartist.t
 typemap
+fallback/const-c.inc
+fallback/const-xs.inc

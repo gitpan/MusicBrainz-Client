@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 
    MusicBrainz Perl XS Interface -- The Internet music metadatabase
-     $Id: Client.xs,v 1.1 2003/02/20 19:54:42 robert Exp $
+     $Id: Client.xs,v 1.2 2003/02/21 07:43:30 sander Exp $
 ----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus      
@@ -407,6 +407,7 @@ PREINIT:
   int samplerate = 0;   
 PPCODE:  
   mb_GetMP3Info(mb,filename,&duration,&bitrate,&stereo,&samplerate);
+  XPUSHs(sv_2mortal(newSViv(duration)));
   XPUSHs(sv_2mortal(newSViv(bitrate)));
   XPUSHs(sv_2mortal(newSViv(stereo)));
   XPUSHs(sv_2mortal(newSViv(samplerate)));

@@ -1,18 +1,16 @@
 # Before `make install' is performed this script should be runnable with
 # `make test'. After `make install' it should work as `perl 1.t'
 
-# $Id: 1.t,v 1.1 2003/02/20 19:54:42 robert Exp $
+# $Id: 1.t,v 1.2 2003/02/22 08:37:49 sander Exp $
 #########################
 
 # change 'tests => 2' to 'tests => last_test_to_print';
 
-use Test;
-BEGIN { plan tests => 2 };
-use MusicBrainz::Client;
-ok(1); # If we made it this far, we're ok.
+use Test::More tests => 2;
+BEGIN { use_ok('MusicBrainz::Client') };
 
 
-my $fail;
+my $fail = 0;
 foreach my $constname (qw(
 	MB_CDINDEX_ID_LEN MB_ID_LEN)) {
   next if (eval "my \$a = $constname; 1");
@@ -20,15 +18,12 @@ foreach my $constname (qw(
     print "# pass: $@";
   } else {
     print "# fail: $@";
-    $fail = 1;    
+    $fail = 1;
   }
-}
-if ($fail) {
-  print "not ok 2\n";
-} else {
-  print "ok 2\n";
+
 }
 
+ok( $fail == 0 , 'Constants' );
 #########################
 
 # Insert your test code below, the Test::More module is use()ed here so read

@@ -3,7 +3,12 @@ Revision history for Perl extension MusicBrainz::Client.
 All changes by Sander van Zoest <svanzoest@cpan.org> unless 
 otherwise noted.
 
-$Id: Changes,v 1.16 2004/05/16 20:27:00 sander Exp $
+$Id: Changes,v 1.17 2004/06/17 23:43:40 sander Exp $
+
+0.08 	Fri Jun 18 00:41:04 2004
+	- Fixed int size cast warning
+	- Fixed #6431: unmatched bootstrap parameter
+	- Updated req for MusicBrainz::Queries to 0.07
 
 0.07	Sun May 16 20:23:22 2004
 	- Updated to libmusicbrainz 2.1.1

@@ -1,4 +1,4 @@
-# $Id: MANIFEST,v 1.3 2003/04/16 11:02:44 sander Exp $
+# $Id: MANIFEST,v 1.4 2004/06/17 23:43:40 sander Exp $
 Changes
 Client.pm
 Client.xs
@@ -21,3 +21,4 @@ t/simple.t
 typemap
 fallback/const-c.inc
 fallback/const-xs.inc
+META.yml                                 Module meta-data (added by MakeMaker)

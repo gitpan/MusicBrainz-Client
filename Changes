@@ -3,7 +3,12 @@ Revision history for Perl extension MusicBrainz::Client.
 All changes by Sander van Zoest <svanzoest@cpan.org> unless 
 otherwise noted.
 
-$Id: Changes,v 1.15 2003/05/04 01:11:58 sander Exp $
+$Id: Changes,v 1.16 2004/05/16 20:27:00 sander Exp $
+
+0.07	Sun May 16 20:23:22 2004
+	- Updated to libmusicbrainz 2.1.1
+	  [Matthias Friedrich, Sander van Zoest]
+	- Updated req for MusicBrainz::Queries to 0.06
 
 0.06_01 Sun May  4 01:06:08 2003
 	- Added beginnings of a perlish interface

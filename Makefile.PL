@@ -2,7 +2,7 @@
 use 5.6.1;
 use ExtUtils::MakeMaker;
 
-# $Id: Makefile.PL,v 1.6 2003/05/04 01:07:15 sander Exp $
+# $Id: Makefile.PL,v 1.8 2004/05/16 20:27:00 sander Exp $
 
 sub MY::postamble {
 
@@ -24,8 +24,8 @@ EOT
 # the contents of the Makefile that is written.
 WriteMakefile(
     'NAME'              => 'MusicBrainz::Client',
-    'VERSION'           => '0.06_01',
-    'PREREQ_PM'	        => {'MusicBrainz::Queries' => 0.01,
+    'VERSION'           => '0.07',
+    'PREREQ_PM'	        => {'MusicBrainz::Queries' => 0.06,
                             'Test::More'           => 0 }, 
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'Client.pm', # retrieve abstract from module

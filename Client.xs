@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 
    MusicBrainz Perl XS Interface -- The Internet music metadatabase
-     $Id: Client.xs,v 1.5 2003/02/25 02:10:56 sander Exp $
+     $Id: Client.xs,v 1.6 2004/05/16 20:27:00 sander Exp $
 ----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus      
@@ -27,7 +27,6 @@
 #define MB_ID_LENGTH       256
 #define MB_FRAGMENT_LENGTH  64
 #define MB_URL_LENGTH     1024
-#define MB_SHA1_LENGTH      41
         
    
 /* int* helper routines for default typemap T_ARRAY */
@@ -373,34 +372,6 @@ CODE:
 OUTPUT:
   RETVAL
 
-char*
-mb_calculate_sha1(musicbrainz_t mb, char* filename)
-PROTOTYPE: $$
-PREINIT:
-  char sha1[MB_SHA1_LENGTH];
-  int status;
-CODE:
-  status = mb_CalculateSha1(mb,filename,sha1);
-  RETVAL = sha1;
-OUTPUT:
-  RETVAL
-CLEANUP:
-  if(status == 0)
-    XSRETURN_UNDEF;
-
-# XXX: Fix me!
-#BitprintInfo*
-#mb_calculate_bitprint(musicbrainz_t mb, char *filename)
-#PROTOTYPE: $$$
-#PREINIT:
-#bitprintInfo *info = malloc(sizeof(BitprintInfo));
-#PPCODE:
-##     if(!mb_CalculateBitprint(mb,filename,info)) {
-#       XSRETURN_PV(info);
-#     } else {
-#       XSRETURN_UNDEF;
-#     }
-   
 void
 mb_get_mp3_info(musicbrainz_t mb, char* filename)
 PROTOTYPE: $$

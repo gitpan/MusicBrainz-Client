@@ -3,9 +3,9 @@ package MusicBrainz::Client;
 #
 #   MusicBrainz::Client -- The Internet music metadatabase
 #
-#   Copyright (C) 2003 Alexander van Zoest
+#   Copyright (C) 2003,2004 Alexander van Zoest
 #   
-#   $Id: Client.pm,v 1.7 2003/04/17 19:08:40 sander Exp $
+#   $Id: Client.pm,v 1.8 2004/05/16 20:27:00 sander Exp $
 #
 #----------------------------------------------------------------------------*/
 
@@ -35,7 +35,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.7 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 
 sub AUTOLOAD {
@@ -422,18 +422,8 @@ of a list of tracks in an album. A result list query (usually MBE_AlbumGetTrackL
 See also: MBE_AlbumGetTrackList in MusicBrainz::Queries
 
 
-=item calculate_sha1
-
-
-$sha1 = $mb->calculate_sha1($filename);
-
-Calculate the sha1 hash for a given filename. This function is often used in 
-conjunction with an MBQ_ExchangeMetadataLite query, to calculate the needed 
-arguments for a metadata exchange with the MusicBrainz server.
-
-Returns true if the sha1 value was successfully calculated, false otherwise. 
-
 =item get_mp3_info
+
 
 ($duration, $bitrate, $stereo, $samplerate) =  $mb->get_mp3_info($filename);
 
@@ -473,7 +463,7 @@ Sander van Zoest <svanzoest@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003 by Alexander van Zoest.
+Copyright 2003,2004 by Alexander van Zoest.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

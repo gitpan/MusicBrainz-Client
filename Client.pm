@@ -3,9 +3,9 @@ package MusicBrainz::Client;
 #
 #   MusicBrainz::Client -- The Internet music metadatabase
 #
-#   Copyright (C) 2003,2004 Alexander van Zoest
+#   Copyright (C) 2003-2005 Alexander van Zoest
 #   
-#   $Id: Client.pm,v 1.8 2004/05/16 20:27:00 sander Exp $
+#   $Id: Client.pm,v 1.9 2005/04/25 11:04:32 sander Exp $
 #
 #----------------------------------------------------------------------------*/
 
@@ -35,7 +35,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.8 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 1.9 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 
 sub AUTOLOAD {
@@ -434,6 +434,10 @@ TRM routines are expecting the duratin in SECONDS, so you will need to divide th
 duration returned by this function by 1000 before you pass it to the TRM routines.
 
 =back
+
+=head2 Windows Platform
+
+Since this module makes use of Sockets, be sure to call $mb->WSAInit() and $mb->WSAStop().
   
 =head2 Examples
 
@@ -463,7 +467,7 @@ Sander van Zoest <svanzoest@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003,2004 by Alexander van Zoest.
+Copyright 2003-2005 by Alexander van Zoest.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

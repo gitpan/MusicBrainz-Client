@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 
    MusicBrainz Perl XS Interface -- The Internet music metadatabase
-     $Id: Client.xs,v 1.6 2004/05/16 20:27:00 sander Exp $
+     $Id: Client.xs,v 1.7 2005/10/27 06:35:56 sander Exp $
 ----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus      
@@ -365,10 +365,10 @@ OUTPUT:
   RETVAL
 
 int
-mb_get_ordinal_from_list(musicbrainz_t mb, char* resultList, char* URI)
+mb_get_ordinal_from_list(musicbrainz_t mb, char* listType, char* URI)
 PROTOTYPE: $$$
 CODE:
-  RETVAL = mb_GetOrdinalFromList(mb,resultList,URI);
+  RETVAL = mb_GetOrdinalFromList(mb,listType,URI);
 OUTPUT:
   RETVAL
 

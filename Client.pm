@@ -5,7 +5,7 @@ package MusicBrainz::Client;
 #
 #   Copyright (C) 2003-2005 Alexander van Zoest
 #   
-#   $Id: Client.pm,v 1.9 2005/04/25 11:04:32 sander Exp $
+#   $Id: Client.pm,v 1.10 2005/10/27 06:38:43 sander Exp $
 #
 #----------------------------------------------------------------------------*/
 
@@ -35,7 +35,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.9 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 1.10 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 
 sub AUTOLOAD {
@@ -413,11 +413,11 @@ will return 'ArtistResult'
 =item get_ordinal_from_list
 
 
-$ord = $mb->get_ordinal_from_list($resultList, $URI);
+$ord = $mb->get_ordinal_from_list($listType, $URI);
 
 Get the ordinal (list position) of an item in a list. 
 This function is normally used to retrieve the track number out 
-of a list of tracks in an album. A result list query (usually MBE_AlbumGetTrackList)
+of a list of tracks in an album using a list query (usually MBE_AlbumGetTrackList)
 
 See also: MBE_AlbumGetTrackList in MusicBrainz::Queries
 

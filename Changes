@@ -3,7 +3,11 @@ Revision history for Perl extension MusicBrainz::Client.
 All changes by Sander van Zoest <svanzoest@cpan.org> unless 
 otherwise noted.
 
-$Id: Changes,v 1.18 2005/04/25 11:04:32 sander Exp $
+$Id: Changes,v 1.21 2005/11/11 09:00:01 sander Exp $
+
+0.10 	Fri Nov 11 08:58:46 2005
+	- Updated to libmusicbrainz 2.1.2
+	- Updated req for MusicBrainz::Queries to 0.09
 
 0.09 	Mon Apr 25 10:42:42 2005
 	- Added $mb->WSAInit(), $mb->WSAStop() calls to Simple.pm

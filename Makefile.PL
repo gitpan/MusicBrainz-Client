@@ -2,7 +2,7 @@
 use 5.6.1;
 use ExtUtils::MakeMaker;
 
-# $Id: Makefile.PL,v 1.10 2005/10/27 06:35:56 sander Exp $
+# $Id: Makefile.PL 8060 2006-07-03 22:23:51Z svanzoest $
 
 sub MY::postamble {
 
@@ -10,12 +10,12 @@ sub MY::postamble {
 ck_version :
 	@perl -MExtUtils::MakeMaker -le 'print "Version: " . MM->parse_version(shift)' $(VERSION_FROM)
 
-cvs_export :
-	cvs export -r$(NAME_SYM)_$(VERSION_SYM) -d$(DISTVNAME) $(CVS_PACKAGE)
+svn_export :
+	svn export -rHEAD $(SVN_PACKAGE)/tags/cpan_$(NAME_SYM)_$(VERSION_SYM) $(DISTVNAME)
 
-cvs_tag :
-	cvs tag $(NAME_SYM)_$(VERSION_SYM) .
-	@echo tagged all files with $(NAME_SYM)_$(VERSION_SYM)
+svn_tag :
+	svn copy $(SVN_PACKAGE)/trunk $(SVN_PACKAGE)/tags/cpan_$(NAME_SYM)_$(VERSION_SYM)
+	@echo tagged all files with cpan_$(NAME_SYM)_$(VERSION_SYM)
 
 EOT
 }
@@ -25,7 +25,7 @@ EOT
 WriteMakefile(
     'NAME'              => 'MusicBrainz::Client',
     'VERSION_FROM'           => 'Client.pm', # finds $VERSION
-    'PREREQ_PM'	        => {'MusicBrainz::Queries' => 0.09,
+    'PREREQ_PM'	        => {'MusicBrainz::Queries' => '0.10',
                             'Test::More'           => 0 }, 
     ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM => 'Client.pm', # retrieve abstract from module
@@ -45,7 +45,8 @@ WriteMakefile(
 	FILES 		=> 'const-c.inc const-xs.inc MANIFEST.bak'
 		           },
      macro	        => {
-	CVS_PACKAGE	=> ''
+	SVN_PACKAGE	=> 'http://svn.musicbrainz.org/libmusicbrainz',
+        SVN_PATH	=> '/perl/Client'
 			   },
 );
 if  (eval {require ExtUtils::Constant; 1}) {

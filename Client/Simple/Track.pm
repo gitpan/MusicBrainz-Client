@@ -1,7 +1,7 @@
 package MusicBrainz::Client::Simple::Track;
 # --------------------------------------------------------------------------
 #
-#   $Id: Track.pm,v 1.3 2003/04/29 23:37:03 sander Exp $
+#   $Id: Track.pm 640 2003-04-29 23:37:03Z sander $
 #
 #----------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.3 $ =~ /\d+/g); $r[0]--;sprintf "%d." ."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 640 $ =~ /\d+/g); $r[0]--;sprintf "%d." ."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 #
 #		id		=> 

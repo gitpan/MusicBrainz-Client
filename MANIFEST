@@ -1,4 +1,4 @@
-# $Id: MANIFEST,v 1.4 2004/06/17 23:43:40 sander Exp $
+# $Id: MANIFEST 738 2004-06-17 23:43:40Z sander $
 Changes
 Client.pm
 Client.xs

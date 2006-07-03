@@ -1,7 +1,7 @@
 # Before `make install' is performed this script should be runnable with
 # `make test'. After `make install' it should work as `perl 1.t'
 
-# $Id: 1.t,v 1.3 2003/02/25 02:11:51 sander Exp $
+# $Id: 1.t 597 2003-02-25 02:11:51Z sander $
 #########################
 
 # change 'tests => 2' to 'tests => last_test_to_print';

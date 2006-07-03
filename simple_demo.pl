@@ -1,5 +1,5 @@
 #
-# $Id: simple_demo.pl,v 1.5 2005/04/25 11:04:32 sander Exp $
+# $Id: simple_demo.pl 746 2005-04-25 11:04:32Z sander $
 #
 use MusicBrainz::Client::Simple;
 use strict;

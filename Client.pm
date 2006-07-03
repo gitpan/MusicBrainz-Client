@@ -3,9 +3,9 @@ package MusicBrainz::Client;
 #
 #   MusicBrainz::Client -- The Internet music metadatabase
 #
-#   Copyright (C) 2003-2005 Alexander van Zoest
+#   Copyright (C) 2003-2006 Alexander van Zoest
 #   
-#   $Id: Client.pm,v 1.10 2005/10/27 06:38:43 sander Exp $
+#   $Id: Client.pm 8065 2006-07-03 22:49:35Z svanzoest $
 #
 #----------------------------------------------------------------------------*/
 
@@ -35,7 +35,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.10 $ =~ /\d+/g); $r[0]--;sprintf "%d."."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = 0.11;
 
 
 sub AUTOLOAD {
@@ -467,7 +467,7 @@ Sander van Zoest <svanzoest@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003-2005 by Alexander van Zoest.
+Copyright 2003-2006 by Alexander van Zoest.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

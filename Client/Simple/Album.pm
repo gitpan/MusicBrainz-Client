@@ -1,7 +1,7 @@
 package MusicBrainz::Client::Simple::Album;
 # --------------------------------------------------------------------------
 #
-#   $Id: Album.pm,v 1.5 2005/04/25 11:04:32 sander Exp $
+#   $Id: Album.pm 746 2005-04-25 11:04:32Z sander $
 #
 #----------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
 );
 
-our $VERSION = do { my @r = (q$Revision: 1.5 $ =~ /\d+/g); $r[0]--;sprintf "%d." ."%02d" x $#r, @r }; # must be all one line, for MakeMaker
+our $VERSION = do { my @r = (q$Revision: 746 $ =~ /\d+/g); $r[0]--;sprintf "%d." ."%02d" x $#r, @r }; # must be all one line, for MakeMaker
 
 
 

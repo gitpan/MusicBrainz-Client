@@ -1,7 +1,7 @@
 /* --------------------------------------------------------------------------
 
    MusicBrainz Perl XS Interface -- The Internet music metadatabase
-     $Id: Client.xs,v 1.7 2005/10/27 06:35:56 sander Exp $
+     $Id: Client.xs 754 2005-10-27 06:35:56Z sander $
 ----------------------------------------------------------------------------*/
 
 #ifdef __cplusplus      

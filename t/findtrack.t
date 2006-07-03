@@ -1,7 +1,7 @@
 BEGIN { $| =1;  print "1..1\n"; }
 END { print "not ok 1\n" unless $loaded; }
 #
-# $Id: findtrack.t,v 1.4 2003/04/16 11:02:44 sander Exp $
+# $Id: findtrack.t 636 2003-04-16 11:02:44Z sander $
 #
 use strict;
 use MusicBrainz::Client;

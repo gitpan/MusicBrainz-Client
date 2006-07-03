@@ -1,4 +1,4 @@
-# $Id: typemap,v 1.2 2004/06/17 23:41:26 sander Exp $
+# $Id: typemap 736 2004-06-17 23:41:26Z sander $
 #
 TYPEMAP
 musicbrainz_t      O_OBJECT

@@ -3,7 +3,7 @@
 
 use strict;
 
-# $Id: simple.t,v 1.1 2003/04/16 11:02:44 sander Exp $
+# $Id: simple.t 636 2003-04-16 11:02:44Z sander $
 #########################
 
 # change 'tests => 1' to 'tests => last_test_to_print';
